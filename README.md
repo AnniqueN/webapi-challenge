@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Answer: Server-side routing with express, and express middleware.
+
 - [ ] Describe Middleware?
+
+Answer: Middleware consists of functions that get executed in the order they are introduced in the server code. Middleware can (but doesn't necessarily have to) modify the request and response objects, or even stop the request and send a response to the client.
 
 - [ ] Describe a Resource?
 
+Answer:A resource is any data that we are serving to the client by way of the api. Often it is grouped by type and put onto corresponding endpoints, such as /products, /suppliers, etc. There may be multiple http methods available on a resource.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+Answer:An http status code in the 'success' range, such as 200. Status codes in the 400s indicate the client made a bad request, and those in the 500s indicate there was an error on the server.
+
 - [ ] How can we partition our application into sub-applications?
+
+Answer:By using server-side routing with express. We can break up the different routes such as /products, /suppliers, into different files, import them into our main server.js file, and write lines such as express.use('/products', SuppliersRouter)
 
 ## Project Setup
 
